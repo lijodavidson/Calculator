@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -69,10 +70,12 @@ public class MainActivity extends AppCompatActivity {
     private void multiplication() {
         number_1 = Double.parseDouble(value1.getText().toString());
         number_2 = Double.parseDouble(value2.getText().toString());
+
         answer=number_1*number_2;
         dispplay_answer.setText(Double.toString(answer));
         String getInput=dispplay_answer.getText().toString();
-        addArray.add(getInput);
+        addArray.add(getInput.concat(" Multiplication"));
+
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1,addArray);
         show.setAdapter(adapter);
 
@@ -85,7 +88,8 @@ public class MainActivity extends AppCompatActivity {
         answer=number_1/number_2;
         dispplay_answer.setText(Double.toString(answer));
         String getInput=dispplay_answer.getText().toString();
-        addArray.add(getInput);
+        addArray.add(getInput.concat(" Division"));
+
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1,addArray);
         show.setAdapter(adapter);
 
@@ -99,7 +103,8 @@ public class MainActivity extends AppCompatActivity {
         answer=number_1-number_2;
         dispplay_answer.setText(Double.toString(answer));
         String getInput=dispplay_answer.getText().toString();
-        addArray.add(getInput);
+        addArray.add(getInput.concat(" Subtraction"));
+
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1,addArray);
         show.setAdapter(adapter);
 
@@ -110,10 +115,11 @@ public class MainActivity extends AppCompatActivity {
 
         number_1 = Double.parseDouble(value1.getText().toString());
         number_2 = Double.parseDouble(value2.getText().toString());
+
         answer=number_1+number_2;
-       dispplay_answer.setText(Double.toString(answer));
+        dispplay_answer.setText(Double.toString(answer));
         String getInput=dispplay_answer.getText().toString();
-        addArray.add(getInput);
+        addArray.add(getInput.concat(" Addition"));
         ArrayAdapter<String> adapter=new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1,addArray);
         show.setAdapter(adapter);
 

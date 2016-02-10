@@ -32,12 +32,14 @@ android:layout_gravity="center"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:id="@+id/first_number"
+            android:inputType="number"
             android:layout_margin="6dp" />
 
         <EditText
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:id="@+id/second_number"
+            android:inputType="number"
             android:layout_margin="6dp" />
     </LinearLayout>
 
@@ -77,7 +79,7 @@ android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
+
         android:id="@+id/output"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
